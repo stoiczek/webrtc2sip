@@ -265,6 +265,7 @@ int MPSipCallback::OnInviteEvent(const InviteEvent* e)
 		/* INCOMING NEW CALL (INVITE) */
 		case tsip_i_newcall:
 		{
+            TSK_DEBUG_INFO("Got a new invite request");
 			assert(e->getSession() == NULL);
 			assert(e->getSipMessage() != NULL);
 
